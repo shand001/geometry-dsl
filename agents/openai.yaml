@@ -1,0 +1,4 @@
+interface:
+  display_name: "Geometry DSL"
+  short_description: "Create geometry diagrams as PNG/SVG images"
+  default_prompt: "Use $geometry-dsl to draw the geometry diagram: write Geometry DSL source, validate it, render it to a PNG image, and deliver the image."

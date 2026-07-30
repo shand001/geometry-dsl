@@ -1,0 +1,77 @@
+{
+  "name": "@geometry-dsl/renderer",
+  "version": "0.4.0",
+  "description": "Geometry DSL V0.4 parser, region engine, text layout and SVG renderer — a deterministic diagram language designed for AI agents",
+  "keywords": [
+    "geometry",
+    "geometry-diagram",
+    "math-diagrams",
+    "dsl",
+    "svg",
+    "diagram",
+    "text-to-diagram",
+    "math",
+    "mathematics",
+    "education",
+    "ai-agent",
+    "llm",
+    "llm-tools",
+    "ai-diagrams",
+    "claude-skill",
+    "agent-skill",
+    "agentskills",
+    "tikz-alternative",
+    "mermaid-alternative",
+    "deterministic"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./parser": {
+      "types": "./dist/language/parser.d.ts",
+      "import": "./dist/language/parser.js"
+    },
+    "./geometry": {
+      "types": "./dist/geometry/index.d.ts",
+      "import": "./dist/geometry/index.js"
+    },
+    "./svg": {
+      "types": "./dist/render/svg.d.ts",
+      "import": "./dist/render/svg.js"
+    },
+    "./markdown": {
+      "types": "./dist/markdown.d.ts",
+      "import": "./dist/markdown.js"
+    }
+  },
+  "bin": {
+    "geometry-dsl": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "SKILL.md",
+    "scripts",
+    "references",
+    "agents"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test",
+    "check": "npm run build && npm test",
+    "check:docs": "node scripts/check_docs.mjs"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "license": "MIT",
+  "optionalDependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "typescript": "^7.0.2"
+  }
+}

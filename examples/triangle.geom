@@ -1,0 +1,11 @@
+# Triangle with altitude, circumcircle, and semantic marks
+A = point(-3, -2, label_pos=below_left)
+B = point(3, -2, label_pos=below_right)
+C = point(0, 3, label_pos=above)
+AB = line(A, B, color=blue, width=2)
+BC = line(B, C, color=blue, width=2)
+CA = line(C, A, color=blue, width=2)
+F = project(C, AB, color=red, label_pos=below)
+altitude = line(C, F, dashed=true, color=red)
+circumcircle = circle(A, B, C, color=gray, width=1.5)
+mark(right, C, F, A, color=red)

@@ -1,0 +1,47 @@
+# 斐波那契黄金螺旋：边长 1, 1, 2, 3, 5, 8 的正方形与四分之一圆弧
+p00 = point(0, 0, visible=false)
+p10 = point(1, 0, visible=false)
+p11 = point(1, 1, visible=false)
+p01 = point(0, 1, visible=false)
+p12 = point(1, 2, visible=false)
+p02 = point(0, 2, visible=false)
+p_20 = point(-2, 0, visible=false)
+p_22 = point(-2, 2, visible=false)
+p_2_3 = point(-2, -3, visible=false)
+p1_3 = point(1, -3, visible=false)
+p6_3 = point(6, -3, visible=false)
+p62 = point(6, 2, visible=false)
+p610 = point(6, 10, visible=false)
+p_210 = point(-2, 10, visible=false)
+
+sq1 = path(p00, p10, p11, p01, closed=true, fill="#f8fafc", color="#94a3b8", width=1.5, layer=0)
+sq2 = path(p01, p11, p12, p02, closed=true, fill="#f1f5f9", color="#94a3b8", width=1.5, layer=0)
+sq3 = path(p_20, p00, p02, p_22, closed=true, fill="#f8fafc", color="#94a3b8", width=1.5, layer=0)
+sq4 = path(p_2_3, p1_3, p10, p_20, closed=true, fill="#f1f5f9", color="#94a3b8", width=1.5, layer=0)
+sq5 = path(p1_3, p6_3, p62, p12, closed=true, fill="#f8fafc", color="#94a3b8", width=1.5, layer=0)
+sq6 = path(p_22, p62, p610, p_210, closed=true, fill="#f1f5f9", color="#94a3b8", width=1.5, layer=0)
+
+num1 = text(inside(sq1), "1", size=12, color="#64748b", layer=5)
+num2 = text(inside(sq2), "1", size=12, color="#64748b", layer=5)
+num3 = text(inside(sq3), "2", size=16, color="#64748b", layer=5)
+num4 = text(inside(sq4), "3", size=20, color="#64748b", layer=5)
+num5 = text(inside(sq5), "5", size=26, color="#64748b", layer=5)
+num6 = text(inside(sq6), "8", size=34, color="#64748b", layer=5)
+
+# 每段圆弧都是四分之一圆，端点精确衔接
+c12 = circle(p01, 1, visible=false)
+c3 = circle(p00, 2, visible=false)
+c4 = circle(p10, 3, visible=false)
+c5 = circle(p12, 5, visible=false)
+c6 = circle(p_22, 8, visible=false)
+
+arc1 = arc(c12, p00, p11, sweep=ccw, color="#f59e0b", width=3, layer=2)
+arc2 = arc(c12, p11, p02, sweep=ccw, color="#f97316", width=3, layer=2)
+arc3 = arc(c3, p02, p_20, sweep=ccw, color="#ef4444", width=3, layer=2)
+arc4 = arc(c4, p_20, p1_3, sweep=ccw, color="#ec4899", width=3, layer=2)
+arc5 = arc(c5, p1_3, p62, sweep=ccw, color="#8b5cf6", width=3, layer=2)
+arc6 = arc(c6, p62, p_210, sweep=ccw, color="#3b82f6", width=3, layer=2)
+
+# 标题放在圆弧支撑圆带来的留白处
+title = text(-6.4, -2.4, "Fibonacci", size=40, color="#334155", layer=5)
+subtitle = text(-6.4, -3.6, "1 1 2 3 5 8", size=24, color="#94a3b8", layer=5)

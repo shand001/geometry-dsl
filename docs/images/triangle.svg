@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="404" height="404" viewBox="0 0 404 404" role="img" aria-label="Geometry DSL rendering">
+<defs><marker id="g-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0,0 L8,4 L0,8 Z" fill="context-stroke"/></marker></defs>
+<g data-type="Point" data-object-id="1" opacity="1" fill="#000000" stroke="#000000"><circle cx="52" cy="282" r="2"/><text x="37.32" y="304.8" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-size="28" fill="#000000" stroke="none">A</text></g>
+<g data-type="Point" data-object-id="2" opacity="1" fill="#000000" stroke="#000000"><circle cx="352" cy="282" r="2"/><text x="366.68" y="304.8" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-size="28" fill="#000000" stroke="none">B</text></g>
+<g data-type="Point" data-object-id="3" opacity="1" fill="#000000" stroke="#000000"><circle cx="202" cy="32" r="2"/><text x="202" y="15.92" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-size="16.8" fill="#000000" stroke="none">C</text></g>
+<line data-type="Line" data-kind="segment" data-object-id="4" x1="52" y1="282" x2="352" y2="282" fill="none" opacity="1" stroke="#0000ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<line data-type="Line" data-kind="segment" data-object-id="5" x1="352" y1="282" x2="202" y2="32" fill="none" opacity="1" stroke="#0000ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<line data-type="Line" data-kind="segment" data-object-id="6" x1="202" y1="32" x2="52" y2="282" fill="none" opacity="1" stroke="#0000ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-type="Point" data-object-id="7" opacity="1" fill="#ff0000" stroke="#ff0000"><circle cx="202" cy="282" r="2"/><text x="207.3576" y="317.7343" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-size="28" fill="#ff0000" stroke="none">F</text></g>
+<line data-type="Line" data-kind="segment" data-object-id="8" x1="202" y1="32" x2="202" y2="282" fill="none" opacity="1" stroke="#ff0000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 4"/>
+<circle data-type="Circle" data-object-id="9" cx="202" cy="202" r="170" fill="none" opacity="1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path data-type="Mark" data-kind="right" data-object-id="10" d="M 202 274 L 194 274 L 194 282" fill="none" opacity="1" stroke="#ff0000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,27 @@
+# Three-set Venn: all seven membership regions of three overlapping disks.
+O1 = point(0, -1.4, visible=false)
+O2 = point(-1.9, 1.3, visible=false)
+O3 = point(1.9, 1.3, visible=false)
+cA = circle(O1, 2.8, fill=none, color="#2563eb", width=2, layer=5)
+cB = circle(O2, 2.8, fill=none, color="#dc2626", width=2, layer=5)
+cC = circle(O3, 2.8, fill=none, color="#16a34a", width=2, layer=5)
+A = inside(cA)
+B = inside(cB)
+C = inside(cC)
+
+AB = intersection(A, B)
+AC = intersection(A, C)
+BC = intersection(B, C)
+
+onlyA = difference(A, union(B, C), fill="#bfdbfe", layer=1)
+onlyB = difference(B, union(A, C), fill="#fecaca", layer=1)
+onlyC = difference(C, union(A, B), fill="#bbf7d0", layer=1)
+onlyAB = difference(AB, C, fill="#e9d5ff", layer=1)
+onlyAC = difference(AC, B, fill="#fde68a", layer=1)
+onlyBC = difference(BC, A, fill="#fed7aa", layer=1)
+center = intersection(AB, C, fill="#f5d0fe", layer=1)
+
+labelA = text(onlyA, "A", size=26, layer=10)
+labelB = text(onlyB, "B", size=26, layer=10)
+labelC = text(onlyC, "C", size=26, layer=10)
+labelABC = text(center, "ABC", size=18, layer=10)
